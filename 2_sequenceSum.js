@@ -14,3 +14,4 @@ const sequenceSum = (begin, end) => {
     }
     return begin + sequenceSum(begin + 1, end);
   };
+  console.log(sequenceSum(1, 10));
