@@ -2,14 +2,15 @@
   "name": "hexlet",
   "version": "1.0.1",
   "description": "## Здесь я буду выкладывать задания которые я решал на Hexlet  в процессе обучения",
-  "main": "",
+  "main": "1_finalGraide.js",
   "dependencies": {
+    "babel": "^6.23.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.10",
-    "@babel/core": "^7.13.10",
-    "@babel/node": "^7.13.12",
+    "@babel/core": "^7.13.13",
+    "@babel/node": "^7.13.13",
     "@babel/preset-env": "^7.13.12"
   },
   "scripts": {
