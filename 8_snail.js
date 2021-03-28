@@ -21,4 +21,4 @@ const buildSnailPath = (matrix) => {
     return [head, buildSnailPath(rotate(tail))].flat();
   };
 
-
+console.log(buildSnailPath(matrix5));
