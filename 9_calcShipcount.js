@@ -8,69 +8,78 @@
 которая проверяет расстановку кораблей на корректность.
 */
 
-
-
 export const calcShipsCount = (matrix) => {
-    let row = 0;
-    let column = 0;
-    let count = 0;
-    while (column < matrix.length) {
-      while (row < matrix.length) {
-        if (matrix[column][row]) {
-          count += 1;
-          if (column !== matrix.length - 1 && matrix[column + 1][row]) {
-            count -= 1;
-          }
+  let row = 0;
+  let column = 0;
+  let count = 0;
+  while (column < matrix.length) {
+    while (row < matrix.length) {
+      if (matrix[column][row]) {
+        count += 1;
+        if (column !== matrix.length - 1 && matrix[column + 1][row]) {
+          count -= 1;
+        }
+        if (matrix[column][row + 1]) {
+          row += 1;
           if (matrix[column][row + 1]) {
             row += 1;
-            if (matrix[column][row + 1]) {
-              row += 1;
-            }
           }
         }
-        if (column !== 0 && matrix[column][row] === true && matrix[column - 1][row] === true) {
-          count += 1;
-          row += 1;
-        }
-        if (matrix[column][row] === true && matrix[column - 1][row] === true) {
-          row += 1;
-        }
+      }
+      if (
+        column !== 0 &&
+        matrix[column][row] === true &&
+        matrix[column - 1][row] === true
+      ) {
+        count += 1;
         row += 1;
       }
-      row = 0;
-      column += 1;
-    }
-    return count;
-  };
-  
-  export const isValidField = (matrix) => {
-    let result = true;
-    let row = 1;
-    let column = 0;
-    while (column < matrix.length) {
-      while (row < matrix.length - 1) {
-        if (matrix[column][row]) {
-          if (typeof (matrix[column - 1]) !== 'undefined' && typeof (matrix[column + 1]) !== 'undefined') {
-            if (matrix[column - 1][row - 1] || matrix[column - 1][row + 1]
-                || matrix[column + 1][row - 1] || matrix[column + 1][row + 1]) {
-              result = false;
-            }
-          }
-          if (typeof (matrix[column - 1]) !== 'undefined') {
-            if (matrix[column - 1][row - 1] || matrix[column - 1][row + 1]) {
-              result = false;
-            }
-          }
-          if (typeof (matrix[column + 1]) !== 'undefined') {
-            if (matrix[column + 1][row - 1] || matrix[column + 1][row + 1]) {
-              result = false;
-            }
-          }
-        }
+      if (matrix[column][row] === true && matrix[column - 1][row] === true) {
         row += 1;
       }
-      row = 1;
-      column += 1;
+      row += 1;
     }
-    return result;
-  };
+    row = 0;
+    column += 1;
+  }
+  return count;
+};
+
+export const isValidField = (matrix) => {
+  let result = true;
+  let row = 1;
+  let column = 0;
+  while (column < matrix.length) {
+    while (row < matrix.length - 1) {
+      if (matrix[column][row]) {
+        if (
+          typeof matrix[column - 1] !== "undefined" &&
+          typeof matrix[column + 1] !== "undefined"
+        ) {
+          if (
+            matrix[column - 1][row - 1] ||
+            matrix[column - 1][row + 1] ||
+            matrix[column + 1][row - 1] ||
+            matrix[column + 1][row + 1]
+          ) {
+            result = false;
+          }
+        }
+        if (typeof matrix[column - 1] !== "undefined") {
+          if (matrix[column - 1][row - 1] || matrix[column - 1][row + 1]) {
+            result = false;
+          }
+        }
+        if (typeof matrix[column + 1] !== "undefined") {
+          if (matrix[column + 1][row - 1] || matrix[column + 1][row + 1]) {
+            result = false;
+          }
+        }
+      }
+      row += 1;
+    }
+    row = 1;
+    column += 1;
+  }
+  return result;
+};

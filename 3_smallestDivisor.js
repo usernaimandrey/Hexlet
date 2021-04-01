@@ -8,12 +8,14 @@
 */
 
 const smallestDivisor = (num) => {
-    const iter = (x, y) => {
-      if (x === 1) {
-        return 1;
-      } if (x % y === 0) {
-        return y;
-      } return iter(x, y + 1);
-    };
-    return iter(num, 2);
+  const iter = (x, y) => {
+    if (x === 1) {
+      return 1;
+    }
+    if (x % y === 0) {
+      return y;
+    }
+    return iter(x, y + 1);
   };
+  return iter(num, 2);
+};

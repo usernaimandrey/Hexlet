@@ -7,11 +7,12 @@ end - конец последовательности. Например: begin =
 */
 
 const sequenceSum = (begin, end) => {
-    if (begin > end) {
-      return NaN;
-    } if (end === begin) {
-      return end;
-    }
-    return begin + sequenceSum(begin + 1, end);
-  };
-  console.log(sequenceSum(1, 10));
+  if (begin > end) {
+    return NaN;
+  }
+  if (end === begin) {
+    return end;
+  }
+  return begin + sequenceSum(begin + 1, end);
+};
+console.log(sequenceSum(1, 10));

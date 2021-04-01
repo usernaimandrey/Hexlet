@@ -2,8 +2,7 @@
  * Реализуйте и экспортируйте по умолчанию функцию, которая принимает две матрицы и возвращает новую матрицу — результат их произведения.
  */
 
-
- function multiply(arr1, arr2) {
+function multiply(arr1, arr2) {
   const result = [];
   let temp = [];
   let sumElement = 0;
@@ -31,7 +30,6 @@
   }
   return result;
 }
-
 
 const matrixC = [
   [2, 5],

@@ -5,47 +5,47 @@
 */
 
 const rotateRight = (coll) => {
-    const len = coll[0].length;
-    const result = [];
-    let arr = [];
-    let indexStr = 0;
-    let indexColum = coll.length - 1;
-    while (indexStr < len) {
-      arr.push(coll[indexColum][indexStr]);
-      indexColum -= 1;
-      if (indexColum < 0) {
-        indexStr += 1;
-        indexColum = coll.length - 1;
-        result.push(arr);
-        arr = [];
-      }
+  const len = coll[0].length;
+  const result = [];
+  let arr = [];
+  let indexStr = 0;
+  let indexColum = coll.length - 1;
+  while (indexStr < len) {
+    arr.push(coll[indexColum][indexStr]);
+    indexColum -= 1;
+    if (indexColum < 0) {
+      indexStr += 1;
+      indexColum = coll.length - 1;
+      result.push(arr);
+      arr = [];
     }
-    return result;
-  };
-  
+  }
+  return result;
+};
+
 const rotateLeft = (coll) => {
-    const result = [];
-    let arr = [];
-    let indexStr = coll[0].length - 1;
-    let indexColum = 0;
-    while (indexStr >= 0) {
-        arr.push(coll[indexColum][indexStr]);
-        indexColum += 1;
-        if (indexColum >= coll.length) {
-            indexStr -= 1;
-            indexColum = 0;
-            result.push(arr);
-            arr = [];
-        }
+  const result = [];
+  let arr = [];
+  let indexStr = coll[0].length - 1;
+  let indexColum = 0;
+  while (indexStr >= 0) {
+    arr.push(coll[indexColum][indexStr]);
+    indexColum += 1;
+    if (indexColum >= coll.length) {
+      indexStr -= 1;
+      indexColum = 0;
+      result.push(arr);
+      arr = [];
     }
-    return result;
+  }
+  return result;
 };
 
 const matrix = [
-    [1, 2, 3, 4],
-    [5, 6, 7, 8],
-    [9, 0, 1, 2],
-  ];
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 0, 1, 2],
+];
 
-  console.log(rotateLeft(matrix));
-  console.log(rotateRight(matrix));
+console.log(rotateLeft(matrix));
+console.log(rotateRight(matrix));
