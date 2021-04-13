@@ -13,6 +13,9 @@
     "@babel/node": "^7.13.13",
     "@babel/preset-env": "^7.13.12",
     "babel": "^6.23.0",
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
     "nvm": "^0.0.4",
     "prettier": "^2.2.1"
   },

@@ -24,9 +24,8 @@ const finalGrade = (exam, projects) => {
   }
   if (exam > 50 && projects >= 2) {
     return 75;
-  } else {
-    return 0;
   }
+  return 0;
 };
 finalGrade(100, 12);
 finalGrade(99, 0);
@@ -36,6 +35,6 @@ finalGrade(55, 3);
 finalGrade(55, 0);
 finalGrade(20, 2);
 console.log(finalGrade);
-console.log("finalGrade");
+console.log('finalGrade');
 
 export default finalGrade;

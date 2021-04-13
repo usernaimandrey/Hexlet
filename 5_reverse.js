@@ -1,10 +1,10 @@
-//Реализуйте функцию reverse,
-//которая переворачивает строку. Например:
+// Реализуйте функцию reverse,
+// которая переворачивает строку. Например:
 
-//reverse('hello, world!'); // !dlrow ,olleh
+// reverse('hello, world!'); // !dlrow ,olleh
 
 const reverse = (str) => {
-  const reversstr = "";
+  const reversstr = '';
   const iter = (acc) => {
     if (acc === 0) {
       return reversstr;
