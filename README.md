@@ -1,3 +1,5 @@
+[![Node.js CI](https://github.com/usernaimandrey/Hexlet/actions/workflows/node.js.yml/badge.svg)](https://github.com/usernaimandrey/Hexlet/actions/workflows/node.js.yml)
+
 # Hexlet
 
 ## Здесь я буду выкладывать задания которые я решал на Hexlet в процессе обучения
