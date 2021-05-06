@@ -33,3 +33,6 @@ jobs:
         # Run Linter
       run: |
           make lint
+    - name: npx jest
+      run: |
+         make test
