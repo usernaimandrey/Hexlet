@@ -1,7 +1,7 @@
 test:
 	npm test
 
-instal:
+install:
 	npm cl
 
 lint:
