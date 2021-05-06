@@ -13,3 +13,5 @@ const reverse = (str) => {
   };
   return iter(str.length);
 };
+
+export default reverse;
