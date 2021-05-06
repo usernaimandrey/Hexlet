@@ -1,8 +1,8 @@
 test:
 	npm test
 
-instal:
-	npm cl
+install:
+	npm ci
 
 lint:
 	npx eslint .
