@@ -10,8 +10,9 @@
   "description": "## Здесь я буду выкладывать задания которые я решал на Hexlet  в процессе обучения",
   "main": "1_finalGraide.js",
   "dependencies": {
-    "lodash": "^4.17.21"
-  },
+    "lodash": "^4.17.21",
+    "@hexlet/immutable-fs-trees": "^0.7.1"
+    },
   "devDependencies": {
     "@jest/globals": "^26.6.2",
     "eslint": "^7.25.0",
